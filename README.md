@@ -79,14 +79,23 @@ Choose a mode:
 | `*.dwl`, `*.dwl2` | AutoCAD lock files |
 | `.smbdelete*` | SMB file share markers |
 
-## Egnyte naming rules reference
+## What gets fixed
 
-- **Illegal characters:** `\ / : " < > | * ?`
-- **No trailing periods** on file or folder names
-- **No leading/trailing spaces**
-- **245 character limit** per file or folder name
-- **5,000 character limit** for the full path
-- **215 character limit** for Microsoft Office file paths
+| Character / Issue | Egnyte blocks it? | Script fixes it? | How |
+|---|---|---|---|
+| `\` backslash | Yes | Yes | Replaced with `_` |
+| `/` forward slash | Yes | N/A | macOS already prevents this in file names |
+| `:` colon | Yes | Yes | Replaced with `_` |
+| `"` double quote | Yes | Yes | Replaced with `_` |
+| `<` `>` angle brackets | Yes | Yes | Replaced with `_` |
+| `\|` pipe | Yes | Yes | Replaced with `_` |
+| `*` asterisk | Yes | Yes | Replaced with `_` |
+| `?` question mark | Yes | Yes | Replaced with `_` |
+| Trailing periods (e.g., `file.`) | Yes | Yes | Stripped from end of name |
+| Leading/trailing spaces | Yes | Yes | Stripped from name |
+| Name longer than 245 characters | Yes | Warned | You'll need to shorten manually |
+| Path longer than 5,000 characters | Yes | Warned | Move to a shorter folder path |
+| Office file path longer than 215 characters | Yes | Warned | Shorten path or file name |
 
 Source: [Egnyte — Unsupported Characters and File Types](https://helpdesk.egnyte.com/hc/en-us/articles/201637074-Unsupported-Characters-and-File-Types)
 
