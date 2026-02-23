@@ -28,7 +28,7 @@ That's it. Terminal will open and walk you through it.
 Paste this into Terminal:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/chrishinds/egnyte-prep/main/egnyte-prep.sh -o /usr/local/bin/egnyte-prep && chmod +x /usr/local/bin/egnyte-prep
+curl -fsSL https://raw.githubusercontent.com/neonluck/egnyte-prep/main/egnyte-prep.sh -o /usr/local/bin/egnyte-prep && chmod +x /usr/local/bin/egnyte-prep
 ```
 
 Then run it anytime:
