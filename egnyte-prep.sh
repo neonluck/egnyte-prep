@@ -60,6 +60,9 @@ TARGET_PATH="${TARGET_PATH#\"}"
 TARGET_PATH="${TARGET_PATH%\'}"
 TARGET_PATH="${TARGET_PATH#\'}"
 
+# Remove backslash escapes from Finder drag-and-drop (e.g., "My\ Folder" → "My Folder")
+TARGET_PATH="${TARGET_PATH//\\/}"
+
 # Trim leading/trailing whitespace
 TARGET_PATH="$(echo -e "${TARGET_PATH}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
