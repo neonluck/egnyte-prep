@@ -25,10 +25,10 @@ That's it. Terminal will open and walk you through it.
 
 ## Option B: Install as a command
 
-Paste this into Terminal:
+Paste this into Terminal (it will ask for your Mac password):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/neonluck/egnyte-prep/main/egnyte-prep.sh -o /usr/local/bin/egnyte-prep && chmod +x /usr/local/bin/egnyte-prep
+sudo curl -fsSL https://raw.githubusercontent.com/neonluck/egnyte-prep/main/egnyte-prep.sh -o /usr/local/bin/egnyte-prep && sudo chmod +x /usr/local/bin/egnyte-prep
 ```
 
 Then run it anytime:
